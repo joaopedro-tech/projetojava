@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class App {
+
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
 
@@ -14,7 +15,10 @@ public class App {
 
         sc.close();
 
-        String mensagem = String.format("Olá, %s. Seja bem vindo! Sua idade é: %d", pessoa.nome, pessoa.idade);
+        String mensagem = 
+        String.format("%s. d", 
+                pessoa.getNome(), 
+                pessoa.getIdade());
         System.out.println(mensagem);
     }
 }
