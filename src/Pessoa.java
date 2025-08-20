@@ -1,14 +1,70 @@
+import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Date;
+
 public class Pessoa {
-  private int idade;
+
   private String nome;
   private int ano;
   private int mes;
   private int dia;
 
+  public String getNome(){
+    return nome;
+  }
+  
+  public void setNome(String nome){
+    this.nome = nome;
+  }
+
+  public int getDia(){
+    return dia;
+  }
+
+  public void setDia(int dia){
+    this.dia = dia;
+  }
+
+  public int getMes(){
+    return mes;
+  }
+
+  public void setMes(int mes){
+    this.mes = mes;
+  }
+
+  public int getAno(){
+    return ano;
+  }
+
+  public void setAno(int ano){
+    this.ano = ano;
+  }
+
+
+
+  public int getAnosVividos(){
+    LocalDate dataAtual = LocalDate.now();
+    int anoAtual = dataAtual.getYear();
+    int mesAtual = dataAtual.getMonthValue();
+    int diaAtual = dataAtual.getDayOfMonth();
+
+    int anosVividos = anoAtual - this.ano;
+    if(mesAtual < this.mes){
+      anosVividos--;
+
+    } else if(mesAtual == this.mes && diaAtual < this.dia){
+        anosVividos--;
+    }
+
+    return anosVividos;
+  }
+
   public int getDiasDeVida(){
-    int anoAtual = 2025;
-    int mesAtual = 8;
-    int diaAtual = 15;
+    LocalDate dataAtual = LocalDate.now();
+    int anoAtual = dataAtual.getYear();
+    int mesAtual = dataAtual.getMonthValue();
+    int diaAtual = dataAtual.getDayOfMonth();
 
     int anosVividos = anoAtual - ano;
     int mesesVividos = 0;
@@ -22,21 +78,5 @@ public class Pessoa {
     (mesesVividos * 30);
 
     return diasVividos;
-  }
- 
-  public int getIdade(){
-    return idade;
-  }
- 
-  public void setIdade(int _idade){
-    idade = _idade;
-  } 
- 
-  public String getNome(){
-    return nome;
-  }
-  
-  public void setNome(String nome){
-    this.nome = nome;
   }
 }
