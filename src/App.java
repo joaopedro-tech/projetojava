@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class App {
 
-    public static void main(String[] args) throws Exception {
-        Scanner sc = new Scanner(System.in);
+    public void lerDadosPessoa(){
+Scanner sc = new Scanner(System.in);
 
         Pessoa pessoa = new Pessoa();
  
         System.out.println("Informe seu nome:");
-        pessoa.setNome(sc.nextLine());
+        //pessoa.setNome(sc.nextLine());
         
         System.out.println("Informe o dia de nascimento:");
         pessoa.setDia(sc.nextInt());
@@ -24,5 +24,10 @@ public class App {
         int diasDeVida = pessoa.getDiasDeVida();
         System.out.println("Dias de vida: " + diasDeVida);
         System.out.println("Sua idade é: " + pessoa.getAnosVividos());
+    }
+
+    public static void main(String[] args) throws Exception {
+        App app = new App();
+        app.lerDadosPessoa();
     }
 }

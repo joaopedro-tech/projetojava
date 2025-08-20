@@ -2,43 +2,38 @@ import java.time.LocalDate;
 
 public class Pessoa {
 
-  private String nome;
+  private String nome = "Lênio";
   private int ano;
   private int mes;
   private int dia;
 
-  public String getNome(){
-    return nome;
-  }
-  
-  public void setNome(String nome){
-    this.nome = nome;
-  }
-
-  public int getDia(){
-    return dia;
-  }
-
-  public void setDia(int dia){
-    this.dia = dia;
-  }
-
-  public int getMes(){
-    return mes;
-  }
-
-  public void setMes(int mes){
-    this.mes = mes;
-  }
-
-  public int getAno(){
+  public int getAno() {
     return ano;
   }
 
-  public void setAno(int ano){
+  public void setAno(int ano) {
     this.ano = ano;
   }
 
+  public int getMes() {
+    return mes;
+  }
+
+  public void setMes(int mes) {
+    this.mes = mes;
+  }
+
+  public int getDia() {
+    return dia;
+  }
+
+  public void setDia(int dia) {
+    this.dia = dia;
+  }
+
+  public String getNome() {
+    return nome;
+  }
 
 
   public int getAnosVividos(){
@@ -76,5 +71,9 @@ public class Pessoa {
     (mesesVividos * 30);
 
     return diasVividos;
+  }
+
+  public void setNome(String nome) {
+    this.nome = nome;
   }
 }
