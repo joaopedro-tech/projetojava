@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class App {
 
     public void lerDadosPessoa(){
-Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         Pessoa pessoa = new Pessoa();
  
@@ -26,8 +26,33 @@ Scanner sc = new Scanner(System.in);
         System.out.println("Sua idade é: " + pessoa.getAnosVividos());
     }
 
+    public void appCarros(){
+// Classe Carro com atributos: marca (texto), modelo (texto) e ano (número)
+// Instancie um Carro e exiba seus atributos.
+// Crie um método chamado exibirInfo() que mostre no console todos os dados do carro em uma única linha.
+// Exemplo de saída: Marca: Chevrolet, Modelo: Onix, Ano: 2020
+// Modifique a classe Carro para que os atributos marca, modelo e ano sejam privados.
+// Crie métodos get e set para acessar e modificar esses atributos.
+// Teste alterando os valores do carro criado anteriormente.
+
+        Carro carro1 = new Carro();
+
+        String marca = "Ford";
+        carro1.setMarca(marca);
+
+        String modelo = "Fiesta";
+        carro1.setModelo(modelo);
+
+        int ano = 2019;
+        carro1.setAno(ano); 
+        
+        carro1.exibirInfo();
+
+    }
+
     public static void main(String[] args) throws Exception {
         App app = new App();
-        app.lerDadosPessoa();
+        //app.lerDadosPessoa();
+        app.appCarros();
     }
 }
