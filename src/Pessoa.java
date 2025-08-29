@@ -57,7 +57,7 @@ public class Pessoa {
     LocalDate dataAtual = LocalDate.now();
     int anoAtual = dataAtual.getYear();
     int mesAtual = dataAtual.getMonthValue();
-    int diaAtual = dataAtual.getDayOfMonth();
+    //int diaAtual = dataAtual.getDayOfMonth();
 
     int anosVividos = anoAtual - ano;
     int mesesVividos = 0;
