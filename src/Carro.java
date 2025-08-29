@@ -2,10 +2,47 @@ public class Carro {
   private String modelo;
   private String marca;
   private int ano;
+  private int kilometragem;
+
+  private String obterMarcaPeloModelo(){
+    if(modelo == "Fiesta"){
+      return "Ford";
+    } else if(modelo == "Fusca"){
+      return "Volks";
+    } else {
+      return "Ainda não consigo identificar a marca do modelo";
+    }
+  }
+
+  private boolean fazCalculoKilometragem(){
+    if(kilometragem >= 9000 && kilometragem <= 11000){
+      return true;
+    } else if(kilometragem >= 19000 && kilometragem <= 21000){
+      return true;
+    } else if(kilometragem >= 29000 && kilometragem <= 31000){
+      return true;
+    } else if(kilometragem >= 39000 && kilometragem <= 41000){
+      return true;
+    }
+    return false;
+  }
+
+  public boolean necessitaRevisao(){
+    return fazCalculoKilometragem();
+  }
 
   public void exibirInfo(){
-    String info = String.format("Marca: %s, Modelo: %s, Ano: %d", marca, modelo, ano);
-    System.out.println(info);
+      marca = obterMarcaPeloModelo();
+      //String message = String.format("Marca: %s, Modelo: %s, Ano: %d", marca, modelo, ano);
+      System.out.println("Marca: " + marca + ", Modelo: "+ modelo + ", Ano: " + ano);
+  }
+
+  public int getKilometragem(){
+    return kilometragem;
+  }
+
+  public void setKilometragem(int kilometragem){
+    this.kilometragem = kilometragem;
   }
   
   public String getModelo(){
@@ -18,10 +55,6 @@ public class Carro {
 
   public String getMarca(){
     return marca;
-  }
-
-  public void setMarca(String marca){
-    this.marca = marca;
   }
 
   public int getAno(){
