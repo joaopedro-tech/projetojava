@@ -8,7 +8,7 @@ public class App {
         Pessoa pessoa = new Pessoa();
  
         System.out.println("Informe seu nome:");
-        //pessoa.setNome(sc.nextLine());
+        pessoa.setNome(sc.nextLine());
         
         System.out.println("Informe o dia de nascimento:");
         pessoa.setDia(sc.nextInt());
@@ -53,7 +53,10 @@ public class App {
     }
 
     public void appAlunos(){
-
+        Aluno a1 = new Aluno();
+        a1.lerNotas();
+        a1.lerFrequencia();
+        a1.exibirStatus();
     }
 
 

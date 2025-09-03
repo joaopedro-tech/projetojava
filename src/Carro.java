@@ -33,8 +33,8 @@ public class Carro {
 
   public void exibirInfo(){
       marca = obterMarcaPeloModelo();
-      //String message = String.format("Marca: %s, Modelo: %s, Ano: %d", marca, modelo, ano);
-      System.out.println("Marca: " + marca + ", Modelo: "+ modelo + ", Ano: " + ano);
+      String message = String.format("Marca: %s, Modelo: %s, Ano: %d", marca, modelo, ano);
+      System.out.println(message);
   }
 
   public int getKilometragem(){
